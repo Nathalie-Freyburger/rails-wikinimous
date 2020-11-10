@@ -1,0 +1,14 @@
+<h1>Add a new article</h1>
+
+<%= form_for(@article) do |f| %>
+
+ <%= f.label :title %>
+ <%= f.text_field :title %>
+ <%= f.label :content %>
+ <%= f.text_area :content %>
+ <%= @article.content %>
+ <%= f.submit %>
+
+<% end %>
+
+<i class="fas fa-redo"></i><span><%= link_to "Back to list", articles_path %></span>
