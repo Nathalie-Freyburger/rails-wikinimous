@@ -1,13 +1,13 @@
 <h1>My Articles</h1>
 
- <% @articles.each do |article| %>
-<h3><%= link_to article.title, article_path(article) %></h3>
-<p><%= article.content %></p>
+<i class="fas fa-plus"></i>
+<%= link_to "New Article", new_article_path %>
 
-<%= link_to "Create", new_article_path(article) %>
-<%= link_to "Edit", edit_article_path(article) %>
-<%= link_to "Delete", article_path(article),
-method: :delete,
-data: { confirm: "Are you sure?" } %>
+<ul>
+<% @articles.each do |article| %>
+<span><h3><%= link_to article.title, article_path(article) %></h3>
+<span><p><%= article.content %></p></span>
 
 <% end %>
+
+</ul>
